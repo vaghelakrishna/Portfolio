@@ -312,9 +312,10 @@ h6 {
   to{
     opacity: 1;
   }
-}
+} 
 .Btn:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
+  transition: all 0.1s ease-in-out;
 }
 
 .profileImg:hover{
@@ -425,10 +426,10 @@ h6 {
   padding: 0 2rem;
 }
 
-.footer-left {
+/* .footer-left {
   font-size: 1rem;
   margin-bottom: .5rem;
-}
+} */
 
 .footer-right {
   display: flex;
@@ -436,6 +437,15 @@ h6 {
   flex-wrap: wrap;
 }
 
+.copyRight{
+  width: 100%;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #333;
+  padding-top: 1rem;  
+}
 .footer-link {
   color: #d4d4d4;
   text-decoration: none;
