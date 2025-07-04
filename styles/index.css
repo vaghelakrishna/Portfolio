@@ -115,10 +115,9 @@ textarea {
   margin-right: 1rem;
   transition-timing-function: cubic-bezier(.25, .46, .45, .94);
 
-  @media (min-width: 768px) {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
