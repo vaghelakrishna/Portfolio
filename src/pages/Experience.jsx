@@ -1,166 +1,207 @@
-import { motion } from 'framer-motion'
-import { SiReact, SiJavascript, SiTypescript, SiTailwindcss, SiNodedotjs, SiGit, SiFigma, SiPostman, SiCss3 } from 'react-icons/si'
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
-import { MdApi } from 'react-icons/md'
-import Navigation from '../components/Navigation'
+import { motion } from "framer-motion"
+import {
+  SiReact,
+  SiJavascript,
+  SiTypescript,
+  SiTailwindcss,
+  SiGit,
+  SiFigma,
+  SiPostman,
+  SiCss3,
+} from "react-icons/si"
+import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"
+import { MdApi } from "react-icons/md"
+import Navigation from "../components/Navigation"
 
 const Experience = () => {
   const experiences = [
     {
-      company: "Kattalyx labs ltd",
-      position: "Full stack web Developer",
-      period: "August 2025 - Present",
+      company: "Kattalyx Labs Ltd",
+      position: "Full Stack Web Developer",
+      period: "August 2025 – Present",
       location: "United States (Remote)",
       description: [
-        "Architected and developed the complete frontend infrastructure for the platform, a comprehensive solution for creating and managing promotional campaigns.",
-        "Led a comprehensive codebase refactoring initiative that improved maintainability, scalability, and development velocity across the entire platform.",
-        "Integrated and optimized backend API connections, implementing efficient data fetching strategies and error handling mechanisms.",
-        "Enhanced user experience and interface design through implementation of consistent design systems, accessibility standards, and performance optimizations."
+        "Architected and developed the complete frontend infrastructure for the platform.",
+        "Led a large-scale codebase refactor improving maintainability and scalability.",
+        "Integrated backend APIs with efficient data fetching and error handling.",
+        "Improved UX through design consistency, accessibility, and performance tuning.",
       ],
-      technologies: ["React", "Tailwind CSS", "JavaScript", "Git", "Figma", "AWS"],
+      technologies: [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Git",
+        "Figma",
+        "API Integration",
+        "Postman",
+      ],
       logo: "/assets/src/LOGO1.png",
-      status: "Working"
+      status: "Working",
     },
     {
       company: "Curio.AI",
       position: "Frontend Developer Intern",
-      period: "June 2025 - July 2025",
-      location: "Bangalore, India (On-Site)",
+      period: "June 2025 – July 2025",
+      location: "Bangalore, India (On-site)",
       description: [
-        "Developed AI-powered interfaces and contributed to machine learning integration projects.",
-        "Collaborated with the design team to create intuitive user experiences.",
-        "Built responsive web applications using modern technologies."
+        "Built AI-powered interfaces for internal tools.",
+        "Worked closely with designers to refine user flows.",
+        "Developed responsive UI components.",
       ],
-      technologies: ["React", "CSS3" , "tailwindCSS"],
+      technologies: ["React", "CSS3", "Tailwind CSS"],
       logo: "/assets/src/LOGO2.png",
-      status: null
-    }
+    },
   ]
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors">
       <Navigation />
-      
-      <div className="max-w-6xl mx-auto px-4 pb-16">
+
+      <div className="max-w-6xl mx-auto px-4 pb-20">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          className="mb-16"
         >
-          <div className="text-left mb-16">
-            <h1 className="text-5xl font-bold mb-4">Work Experience</h1>
-            <p className="text-gray-400 text-lg">
-              My work experiences across different companies and roles.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Work Experience
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
+            My professional experience across different companies and roles.
+          </p>
+        </motion.div>
 
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-2">All Experiences <span className="text-gray-500 text-lg">({experiences.length} experiences)</span></h2>
-          </div>
+        {/* Count */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold">
+            All Experiences{" "}
+            <span className="text-gray-500 text-lg">
+              ({experiences.length})
+            </span>
+          </h2>
+        </div>
 
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                className="border-b border-gray-800 pb-12 last:border-b-0"
-              >
-                <div className="flex items-start gap-6">
-                  {/* Company Logo */}
-                  <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <img 
-                      src={exp.logo} 
-                      alt={exp.company}
-                      className="w-8 h-8 object-contain"
-                    />
+        {/* Experience List */}
+        <div className="space-y-14">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15, duration: 0.5 }}
+              className="border-b border-[var(--border)] pb-14 last:border-none"
+            >
+              <div className="flex gap-6 items-start">
+                {/* Logo */}
+                <div className="w-12 h-12 rounded-lg border border-[var(--border)] bg-[var(--card)] flex items-center justify-center">
+                  <img
+                    src={exp.logo}
+                    alt={exp.company}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:justify-between mb-4 gap-2">
+                    <div>
+                      <div className="flex items-center gap-3 flex-wrap mb-1">
+                        <h3 className="text-xl font-semibold">
+                          {exp.position}
+                        </h3>
+
+                        {exp.status && (
+                          <span className="inline-flex items-center gap-1 text-sm px-2 py-0.5 rounded-md bg-green-500/15 text-green-600 dark:text-green-400">
+                            <span className="w-2 h-2 bg-green-500 rounded-full" />
+                            {exp.status}
+                          </span>
+                        )}
+                      </div>
+
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {exp.company}
+                      </p>
+                    </div>
+
+                    <div className="text-sm text-gray-500 md:text-right">
+                      <div>{exp.period}</div>
+                      <div>{exp.location}</div>
+                    </div>
                   </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <div className="flex items-center gap-3 mb-2 flex-wrap">
-                          <h3 className="text-xl font-semibold">{exp.position}</h3>
-                          <div className="flex items-center gap-2">
-                            <a href="#" className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center hover:bg-gray-600">
-                              <FaTwitter className="w-3 h-3" />
-                            </a>
-                            <a href="#" className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center hover:bg-gray-600">
-                              <FaLinkedin className="w-3 h-3" />
-                            </a>
-                            <a href="#" className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center hover:bg-gray-600">
-                              <FaGithub className="w-3 h-3" />
-                            </a>
-                          </div>
-                          {exp.status && (
-                            <span className="flex items-center gap-1 text-green-400 text-sm">
-                              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                              {exp.status}
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-gray-400">{exp.company}</p>
-                      </div>
-                      <div className="text-right text-sm text-gray-400">
-                        <div>{exp.period}</div>
-                        <div>{exp.location}</div>
-                      </div>
-                    </div>
 
-                    {/* Technologies */}
-                    <div className="mb-6">
-                      <h4 className="text-lg font-medium mb-3">Technologies & Tools</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech, techIndex) => {
-                          const getIcon = (techName) => {
-                            const icons = {
-                              'React': <SiReact className="w-3 h-3 text-[#61DAFB]" />,
-                              'JavaScript': <SiJavascript className="w-3 h-3 text-[#F7DF1E]" />,
-                              'TypeScript': <SiTypescript className="w-3 h-3 text-[#3178C6]" />,
-                              'Tailwind CSS': <SiTailwindcss className="w-3 h-3 text-[#06B6D4]" />,
-                              'CSS3': <SiCss3 className="w-3 h-3 text-[#1572B6]" />,
-                              'Git': <SiGit className="w-3 h-3 text-[#F05032]" />,
-                              'Figma': <SiFigma className="w-3 h-3 text-[#F24E1E]" />,
-                              // 'AWS': <SiAmazonaws className="w-3 h-3 text-[#FF9900]" />,
-                              'Postman': <SiPostman className="w-3 h-3 text-[#FF6C37]" />,
-                              'Bun': <span className="w-3 h-3 bg-[#FBF0DF] rounded-full"></span>,
-                              'API Integration': <MdApi className="w-3 h-3 text-green-400" />
-                            }
-                            return icons[techName] || <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-                          }
-                          
-                          return (
-                            <span
-                              key={techIndex}
-                              className="inline-flex items-center gap-2 px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-md border border-gray-700"
-                            >
-                              {getIcon(tech)}
-                              {tech}
-                            </span>
-                          )
-                        })}
-                      </div>
-                    </div>
+                  {/* Social Icons */}
+                  <div className="flex gap-2 mb-6">
+                    <SocialIcon icon={<FaTwitter />} />
+                    <SocialIcon icon={<FaLinkedin />} />
+                    <SocialIcon icon={<FaGithub />} />
+                  </div>
 
-                    {/* Description */}
-                    <div className="space-y-3">
-                      {exp.description.map((desc, descIndex) => (
-                        <p key={descIndex} className="text-gray-300 leading-relaxed">
-                          • {desc}
-                        </p>
+                  {/* Technologies */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-medium mb-3">
+                      Technologies & Tools
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.technologies.map((tech, i) => (
+                        <TechBadge key={i} tech={tech} />
                       ))}
                     </div>
                   </div>
+
+                  {/* Description */}
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                    {exp.description.map((item, i) => (
+                      <li key={i} className="leading-relaxed">
+                        • {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   )
 }
 
 export default Experience
+
+/* ---------- HELPERS ---------- */
+
+const SocialIcon = ({ icon }) => (
+  <a
+    href="#"
+    className="w-8 h-8 flex items-center justify-center rounded-md
+    border border-[var(--border)] bg-[var(--card)]
+    hover:bg-gray-200 dark:hover:bg-[#222] transition"
+  >
+    {icon}
+  </a>
+)
+
+const TechBadge = ({ tech }) => {
+  const icons = {
+    React: <SiReact className="text-[#61DAFB]" />,
+    JavaScript: <SiJavascript className="text-[#F7DF1E]" />,
+    TypeScript: <SiTypescript className="text-[#3178C6]" />,
+    "Tailwind CSS": <SiTailwindcss className="text-[#06B6D4]" />,
+    CSS3: <SiCss3 className="text-[#1572B6]" />,
+    Git: <SiGit className="text-[#F05032]" />,
+    Figma: <SiFigma className="text-[#F24E1E]" />,
+    Postman: <SiPostman className="text-[#FF6C37]" />,
+    "API Integration": <MdApi className="text-green-500" />,
+  }
+
+  return (
+    <span className="inline-flex items-center gap-2 px-3 py-1 text-sm rounded-md
+      border border-[var(--border)]
+      bg-[var(--card)] text-gray-700 dark:text-gray-300">
+      {icons[tech]}
+      {tech}
+    </span>
+  )
+}

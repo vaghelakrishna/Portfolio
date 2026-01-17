@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
+import { Moon, Sun } from 'lucide-react'
 
 const Navigation = () => {
   const location = useLocation()
@@ -36,9 +37,8 @@ const Navigation = () => {
             <motion.div key={item.path} initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: index * 0.1 }}>
               <Link
                 to={item.path}
-                className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 ${
-                  location.pathname === item.path ? 'bg-gray-200 dark:bg-white/20' : 'hover:bg-gray-100 dark:hover:bg-white/10'
-                }`}
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 ${location.pathname === item.path ? 'bg-gray-200 dark:bg-white/20' : 'hover:bg-gray-100 dark:hover:bg-white/10'
+                  }`}
               >
                 <svg width="15" height="15" viewBox={item.viewBox || "0 0 15 15"} fill="none" className="text-gray-800 dark:text-white">
                   <path d={item.icon} fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
@@ -46,9 +46,9 @@ const Navigation = () => {
               </Link>
             </motion.div>
           ))}
-          
+
           <div className="w-px h-8 bg-gray-400 dark:bg-gray-600 mx-2" />
-          
+
           {socialLinks.map((link, index) => (
             <motion.div key={link.href} initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: (navItems.length + index) * 0.1 }}>
               <a
@@ -63,9 +63,9 @@ const Navigation = () => {
               </a>
             </motion.div>
           ))}
-          
+
           <div className="w-px h-8 bg-gray-400 dark:bg-gray-600 mx-2" />
-          
+
           {/* Theme Toggle */}
           <motion.button
             onClick={toggleTheme}
@@ -74,13 +74,9 @@ const Navigation = () => {
             className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-gray-100 dark:hover:bg-white/10"
           >
             {isDark ? (
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" className="text-gray-800 dark:text-white">
-                <path d="M7.5 0C7.77614 0 8 0.223858 8 0.5V2.5C8 2.77614 7.77614 3 7.5 3C7.22386 3 7 2.77614 7 2.5V0.5C7 0.223858 7.22386 0 7.5 0ZM2.1967 2.1967C2.39196 2.00144 2.70854 2.00144 2.90381 2.1967L4.31802 3.61091C4.51328 3.80617 4.51328 4.12276 4.31802 4.31802C4.12276 4.51328 3.80617 4.51328 3.61091 4.31802L2.1967 2.90381C2.00144 2.70854 2.00144 2.39196 2.1967 2.1967ZM0.5 7C0.223858 7 0 7.22386 0 7.5C0 7.77614 0.223858 8 0.5 8H2.5C2.77614 8 3 7.77614 3 7.5C3 7.22386 2.77614 7 2.5 7H0.5ZM2.1967 12.8033C2.00144 12.608 2.00144 12.2915 2.1967 12.0962L3.61091 10.682C3.80617 10.4867 4.12276 10.4867 4.31802 10.682C4.51328 10.8772 4.51328 11.1938 4.31802 11.3891L2.90381 12.8033C2.70854 12.9986 2.39196 12.9986 2.1967 12.8033ZM12.5 7C12.2239 7 12 7.22386 12 7.5C12 7.77614 12.2239 8 12.5 8H14.5C14.7761 8 15 7.77614 15 7.5C15 7.22386 14.7761 7 14.5 7H12.5ZM10.682 4.31802C10.4867 4.12276 10.4867 3.80617 10.682 3.61091L12.0962 2.1967C12.2915 2.00144 12.608 2.00144 12.8033 2.1967C12.9986 2.39196 12.9986 2.70854 12.8033 2.90381L11.3891 4.31802C11.1938 4.51328 10.8772 4.51328 10.682 4.31802ZM8 12.5C8 12.2239 7.77614 12 7.5 12C7.22386 12 7 12.2239 7 12.5V14.5C7 14.7761 7.22386 15 7.5 15C7.77614 15 8 14.7761 8 14.5V12.5ZM10.682 10.682C10.8772 10.4867 11.1938 10.4867 11.3891 10.682L12.8033 12.0962C12.9986 12.2915 12.9986 12.608 12.8033 12.8033C12.608 12.9986 12.2915 12.9986 12.0962 12.8033L10.682 11.3891C10.4867 11.1938 10.4867 10.8772 10.682 10.682ZM5.5 7.5C5.5 6.39543 6.39543 5.5 7.5 5.5C8.60457 5.5 9.5 6.39543 9.5 7.5C9.5 8.60457 8.60457 9.5 7.5 9.5C6.39543 9.5 5.5 8.60457 5.5 7.5ZM7.5 4.5C5.84315 4.5 4.5 5.84315 4.5 7.5C4.5 9.15685 5.84315 10.5 7.5 10.5C9.15685 10.5 10.5 9.15685 10.5 7.5C10.5 5.84315 9.15685 4.5 7.5 4.5Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-              </svg>
+              <Sun className='h-4 w-4'/>
             ) : (
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" className="text-gray-800 dark:text-white">
-                <path d="M2.89998 0.499976C2.89998 0.279062 2.72089 0.0999756 2.49998 0.0999756C2.27906 0.0999756 2.09998 0.279062 2.09998 0.499976V1.09998H1.49998C1.27906 1.09998 1.09998 1.27906 1.09998 1.49998C1.09998 1.72089 1.27906 1.89998 1.49998 1.89998H2.09998V2.49998C2.09998 2.72089 2.27906 2.89998 2.49998 2.89998C2.72089 2.89998 2.89998 2.72089 2.89998 2.49998V1.89998H3.49998C3.72089 1.89998 3.89998 1.72089 3.89998 1.49998C3.89998 1.27906 3.72089 1.09998 3.49998 1.09998H2.89998V0.499976Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-              </svg>
+                <Moon className='h-4 w-4' />
             )}
           </motion.button>
         </div>
@@ -101,13 +97,10 @@ const Navigation = () => {
               className="w-8 h-8 rounded-full flex items-center justify-center text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10"
             >
               {isDark ? (
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor">
-                  <path d="M7.5 0C7.77614 0 8 0.223858 8 0.5V2.5C8 2.77614 7.77614 3 7.5 3C7.22386 3 7 2.77614 7 2.5V0.5C7 0.223858 7.22386 0 7.5 0Z" />
-                </svg>
+
+                <Sun className='h-4 w-4' />
               ) : (
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor">
-                  <path d="M2.89998 0.499976C2.89998 0.279062 2.72089 0.0999756 2.49998 0.0999756C2.27906 0.0999756 2.09998 0.279062 2.09998 0.499976V1.09998H1.49998C1.27906 1.09998 1.09998 1.27906 1.09998 1.49998C1.09998 1.72089 1.27906 1.89998 1.49998 1.89998H2.09998V2.49998C2.09998 2.72089 2.27906 2.89998 2.49998 2.89998C2.72089 2.89998 2.89998 2.72089 2.89998 2.49998V1.89998H3.49998C3.72089 1.89998 3.89998 1.72089 3.89998 1.49998C3.89998 1.27906 3.72089 1.09998 3.49998 1.09998H2.89998V0.499976Z" />
-                </svg>
+                  <Moon className='h-4 w-4' />
               )}
             </button>
             <button
@@ -119,13 +112,13 @@ const Navigation = () => {
                 className="w-5 h-0.5 bg-gray-800 dark:bg-white block transition-all"
               />
               <motion.span
-                animate={isMenuOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
+                animate={isMenuOpen ? { rotate: -45, y: -2 } : { rotate: 0, y: 0 }}
                 className="w-5 h-0.5 bg-gray-800 dark:bg-white block transition-all"
               />
             </button>
           </div>
         </div>
-        
+
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
