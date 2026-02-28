@@ -1,14 +1,11 @@
-// src/data/projects.js
-
 export const projects = [
-  // ... your other projects
   {
-    slug: "notesbuddy",
-    title: "NotesBuddy",
+    slug: "dev-log",
+    title: "Dev-Log",
     tagline: "A Notes Sharing Platform with Quizzes, Flashcards, PYQs, and more",
     description:
       "NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise with flashcards, execute code snippets, and access PYQs.",
-    image: "/assets/notesbuddy.jpg", // make sure this exists in /public/assets/
+    image: "/assets/devlog.jpg",
     tech: [
       "Next.js",
       "TypeScript",
@@ -21,8 +18,8 @@ export const projects = [
       "Monaco Editor",
       "MDX Integration",
     ],
-    live: "#", // replace with live demo link
-    github: "#", // replace with GitHub link
+    live: "#",
+    github: "#",
     status: "Completed",
     category: "Completed",
     content: `
@@ -31,11 +28,9 @@ export const projects = [
 **Team:** Solo  
 **Status:** Completed  
 
-**Overview:**  
-NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise from flashcards, execute code snippets, and access previous year questions (PYQs).
+**Overview:** NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise from flashcards, execute code snippets, and access previous year questions (PYQs).
 
-**What Users Can Do:**  
-• **Find Notes:** Search and access notes by year or semester (1st to 4th year)  
+**What Users Can Do:** • **Find Notes:** Search and access notes by year or semester (1st to 4th year)  
 • **Share Resources:** Share notes and materials with friends  
 • **Use Flashcards:** Practice with interactive flashcards for active recall  
 • **Attempt Quizzes:** Test your knowledge with practice quizzes  
@@ -45,19 +40,16 @@ NotesBuddy is a modern notes sharing platform that allows users to read notes, g
 • **AI Study Assistant (Coming soon):** Get instant answers to study questions  
 • **Video Material:** Watch video explanations for better understanding  
 
-**Why I Built This:**  
-I built this platform to solve fundamental issues I faced while studying:  
+**Why I Built This:** I built this platform to solve fundamental issues I faced while studying:  
 • Professors don't share notes with students  
 • Topper notes are not available to everyone  
 • Notes are scattered & not organized  
 • Reading one note and then another is painful with no sync, same examples, and inconsistent writing style  
 • I wanted a customizable reading experience instead of PDFs  
 
-**Tech Stack:**  
-Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razorpay SDK, Monaco Editor, MDX Integration  
+**Tech Stack:** Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razorpay SDK, Monaco Editor, MDX Integration  
 
-**After Launch & Impact:**  
-• 1700+ users in 2 months  
+**After Launch & Impact:** • 1700+ users in 2 months  
 • 200k views in 3 months, averaging 15k views during exams  
 • 90+ Premium users in the same duration  
 • Learned SEO, optimization, and how to build a user-focused product  
@@ -66,19 +58,18 @@ Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razor
 • Built a custom CMS for full platform control  
 • Leveraged MDX and custom components for a better learning experience  
 
-**Future Plans:**  
-• Improve CMS system efficiency and scalability  
+**Future Plans:** • Improve CMS system efficiency and scalability  
 • Add AI Study Assistant  
 • Scale the platform to enterprise level
     `,
   },
   {
-    slug: "notesbuddy",
-    title: "NotesBuddy",
+    slug: "trilok-ecommerce",
+    title: "Trilok eCommerce",
     tagline: "A Notes Sharing Platform with Quizzes, Flashcards, PYQs, and more",
     description:
       "NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise with flashcards, execute code snippets, and access PYQs.",
-    image: "/assets/notesbuddy.jpg", // make sure this exists in /public/assets/
+    image: "/assets/trilok.jpg",
     tech: [
       "Next.js",
       "TypeScript",
@@ -91,8 +82,8 @@ Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razor
       "Monaco Editor",
       "MDX Integration",
     ],
-    live: "#", // replace with live demo link
-    github: "#", // replace with GitHub link
+    live: "#",
+    github: "#",
     status: "Completed",
     category: "Completed",
     content: `
@@ -101,11 +92,9 @@ Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razor
 **Team:** Solo  
 **Status:** Completed  
 
-**Overview:**  
-NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise from flashcards, execute code snippets, and access previous year questions (PYQs).
+**Overview:** NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise from flashcards, execute code snippets, and access previous year questions (PYQs).
 
-**What Users Can Do:**  
-• **Find Notes:** Search and access notes by year or semester (1st to 4th year)  
+**What Users Can Do:** • **Find Notes:** Search and access notes by year or semester (1st to 4th year)  
 • **Share Resources:** Share notes and materials with friends  
 • **Use Flashcards:** Practice with interactive flashcards for active recall  
 • **Attempt Quizzes:** Test your knowledge with practice quizzes  
@@ -115,19 +104,16 @@ NotesBuddy is a modern notes sharing platform that allows users to read notes, g
 • **AI Study Assistant (Coming soon):** Get instant answers to study questions  
 • **Video Material:** Watch video explanations for better understanding  
 
-**Why I Built This:**  
-I built this platform to solve fundamental issues I faced while studying:  
+**Why I Built This:** I built this platform to solve fundamental issues I faced while studying:  
 • Professors don't share notes with students  
 • Topper notes are not available to everyone  
 • Notes are scattered & not organized  
 • Reading one note and then another is painful with no sync, same examples, and inconsistent writing style  
 • I wanted a customizable reading experience instead of PDFs  
 
-**Tech Stack:**  
-Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razorpay SDK, Monaco Editor, MDX Integration  
+**Tech Stack:** Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razorpay SDK, Monaco Editor, MDX Integration  
 
-**After Launch & Impact:**  
-• 1700+ users in 2 months  
+**After Launch & Impact:** • 1700+ users in 2 months  
 • 200k views in 3 months, averaging 15k views during exams  
 • 90+ Premium users in the same duration  
 • Learned SEO, optimization, and how to build a user-focused product  
@@ -136,19 +122,18 @@ Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razor
 • Built a custom CMS for full platform control  
 • Leveraged MDX and custom components for a better learning experience  
 
-**Future Plans:**  
-• Improve CMS system efficiency and scalability  
+**Future Plans:** • Improve CMS system efficiency and scalability  
 • Add AI Study Assistant  
 • Scale the platform to enterprise level
     `,
   },
   {
-    slug: "notesbuddy",
-    title: "NotesBuddy",
+    slug: "resume-pdf-ai",
+    title: "Resume PDF AI",
     tagline: "A Notes Sharing Platform with Quizzes, Flashcards, PYQs, and more",
     description:
       "NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise with flashcards, execute code snippets, and access PYQs.",
-    image: "/assets/notesbuddy.jpg", // make sure this exists in /public/assets/
+    image: "/assets/resume-ai.jpg",
     tech: [
       "Next.js",
       "TypeScript",
@@ -161,8 +146,8 @@ Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razor
       "Monaco Editor",
       "MDX Integration",
     ],
-    live: "#", // replace with live demo link
-    github: "#", // replace with GitHub link
+    live: "#",
+    github: "#",
     status: "Completed",
     category: "Completed",
     content: `
@@ -171,11 +156,9 @@ Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razor
 **Team:** Solo  
 **Status:** Completed  
 
-**Overview:**  
-NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise from flashcards, execute code snippets, and access previous year questions (PYQs).
+**Overview:** NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise from flashcards, execute code snippets, and access previous year questions (PYQs).
 
-**What Users Can Do:**  
-• **Find Notes:** Search and access notes by year or semester (1st to 4th year)  
+**What Users Can Do:** • **Find Notes:** Search and access notes by year or semester (1st to 4th year)  
 • **Share Resources:** Share notes and materials with friends  
 • **Use Flashcards:** Practice with interactive flashcards for active recall  
 • **Attempt Quizzes:** Test your knowledge with practice quizzes  
@@ -185,19 +168,16 @@ NotesBuddy is a modern notes sharing platform that allows users to read notes, g
 • **AI Study Assistant (Coming soon):** Get instant answers to study questions  
 • **Video Material:** Watch video explanations for better understanding  
 
-**Why I Built This:**  
-I built this platform to solve fundamental issues I faced while studying:  
+**Why I Built This:** I built this platform to solve fundamental issues I faced while studying:  
 • Professors don't share notes with students  
 • Topper notes are not available to everyone  
 • Notes are scattered & not organized  
 • Reading one note and then another is painful with no sync, same examples, and inconsistent writing style  
 • I wanted a customizable reading experience instead of PDFs  
 
-**Tech Stack:**  
-Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razorpay SDK, Monaco Editor, MDX Integration  
+**Tech Stack:** Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razorpay SDK, Monaco Editor, MDX Integration  
 
-**After Launch & Impact:**  
-• 1700+ users in 2 months  
+**After Launch & Impact:** • 1700+ users in 2 months  
 • 200k views in 3 months, averaging 15k views during exams  
 • 90+ Premium users in the same duration  
 • Learned SEO, optimization, and how to build a user-focused product  
@@ -206,8 +186,7 @@ Next.js, TypeScript, React, Tailwind CSS, Shadcn UI, Zod, React Hook Form, Razor
 • Built a custom CMS for full platform control  
 • Leveraged MDX and custom components for a better learning experience  
 
-**Future Plans:**  
-• Improve CMS system efficiency and scalability  
+**Future Plans:** • Improve CMS system efficiency and scalability  
 • Add AI Study Assistant  
 • Scale the platform to enterprise level
     `,

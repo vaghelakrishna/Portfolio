@@ -20,45 +20,44 @@ import { Link } from "react-router-dom"
 const Projects = () => {
   const [filter, setFilter] = useState("All")
 
-
   const projects = [
+    {
+      title: "Dev-Log",
+      description:
+        "A developer-focused blogging platform for documenting daily progress, sharing technical insights, and building a public 'learning journey' portfolio.",
+      image: "/assets/src/dev-log.jpg",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "MDX"],
+      github: "github.com/vaghelakrishna/dev-log",
+      live: "#",
+      status: "Working",
+      category: "Working",
+      gradient: "from-gray-700 to-gray-900",
+    },
     {
       title: "Trilok eCommerce Website",
       description:
-        "Production-grade full-stack eCommerce platform with product browsing, cart, checkout flow, and scalable architecture.",
+        "Production-grade full-stack eCommerce platform with product browsing, secure cart functionality, checkout flow, and scalable architecture.",
       image: "/assets/src/trilok-ecomm.jpg",
-      tech: ["React", "Tailwind CSS", "JavaScript", "Node.js", "MongoDB"],
-      github: "#",
+      tech: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
+      github: "github.com/vaghelakrishna/trilok-ecommerce",
       live: "#",
       status: "Working",
       category: "Working",
       gradient: "from-gray-700 to-gray-900",
     },
     {
-      title: "Code Viewer / Playground",
+      title: "Resume PDF AI",
       description:
-        "Interactive code viewer that renders and previews HTML, CSS, and JavaScript in real time.",
-      image: "/assets/src/code-viewer.jpg",
-      tech: ["HTML", "CSS3", "JavaScript"],
-      github: "#",
-      live: "#",
-      status: "Working",
-      category: "Working",
-      gradient: "from-gray-700 to-gray-900",
-    },
-    {
-      title: "Algorithm Visualizer",
-      description:
-        "Step-by-step animated algorithm visualizations to understand logic and performance.",
-      image: "/assets/src/algorithm-visualizer.jpg",
-      tech: ["React", "JavaScript"],
-      github: "#",
+        "An intelligent AI-powered tool that parses PDF resumes to provide ATS compatibility scoring and tailored suggestions for improvement.",
+      image: "/assets/src/resume-ai.jpg",
+      tech: ["Next.js", "OpenAI API", "LangChain", "TypeScript"],
+      github: "github.com/vaghelakrishna/resume-pdf-ai",
       live: "#",
       status: "Building",
       category: "Building",
       gradient: "from-gray-600 to-gray-800",
     },
-  ]
+  ];
 
   const filteredProjects =
     filter === "All" ? projects : projects.filter(p => p.category === filter)
