@@ -5,7 +5,7 @@ export const projects = [
     tagline: "A Notes Sharing Platform with Quizzes, Flashcards, PYQs, and more",
     description:
       "NotesBuddy is a modern notes sharing platform that allows users to read notes, give quizzes, revise with flashcards, execute code snippets, and access PYQs.",
-    image: "/assets/devlog.jpg",
+    image: "./src/assets/src/KV.png",
     tech: [
       "Next.js",
       "TypeScript",
